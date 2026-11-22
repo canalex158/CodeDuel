@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>dev.codeduel.plugin</id>
+    <name>CodeDuel</name>
+    <vendor>CodeDuel</vendor>
+    <description><![CDATA[
+        <p>Compite en duelos privados de programación Java directamente en IntelliJ IDEA.</p>
+        <ul>
+            <li>Crea una sala e invita a un amigo con un código.</li>
+            <li>Elige entre quince retos y programa en el editor del IDE.</li>
+            <li>Ejecuta casos públicos, envía tu solución y pide la revancha.</li>
+        </ul>
+        <p>Requiere una instancia del servidor CodeDuel. La URL se configura en la ventana lateral.</p>
+    ]]></description>
+    <change-notes><![CDATA[<p>Primera versión de CodeDuel con duelos privados y evaluación de Java.</p>]]></change-notes>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="CodeDuel" anchor="right" icon="/icons/duel.svg"
+                    factoryClass="dev.codeduel.plugin.CodeDuelToolWindow"/>
+    </extensions>
+</idea-plugin>

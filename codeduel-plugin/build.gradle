@@ -1,0 +1,49 @@
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+
+plugins { id 'org.jetbrains.intellij.platform' }
+
+repositories {
+    intellijPlatform { defaultRepositories() }
+}
+
+dependencies {
+    implementation project(':codeduel-shared')
+    testImplementation 'junit:junit:4.13.2'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+    intellijPlatform {
+        def localIdea = providers.environmentVariable('CODEDUEL_IDEA_HOME').orNull
+        if (localIdea) {
+            local(localIdea)
+        } else {
+            intellijIdea('2025.3.6.2')
+        }
+        bundledPlugin('com.intellij.java')
+        testFramework TestFrameworkType.Platform.INSTANCE
+        pluginVerifier()
+    }
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        name = 'CodeDuel'
+        ideaVersion {
+            sinceBuild = '253'
+            untilBuild = '253.*'
+        }
+    }
+    pluginVerification {
+        ides { current() }
+    }
+    publishing {
+        token = providers.environmentVariable('JETBRAINS_MARKETPLACE_TOKEN')
+    }
+    signing {
+        certificateChain = providers.environmentVariable('JETBRAINS_CERTIFICATE_CHAIN')
+        privateKey = providers.environmentVariable('JETBRAINS_PRIVATE_KEY')
+        password = providers.environmentVariable('JETBRAINS_PRIVATE_KEY_PASSWORD')
+    }
+}
+
+tasks.named('test') {
+    inputs.property('integrationEndpoint', providers.environmentVariable('CODEDUEL_TEST_ENDPOINT').orElse(''))
+}

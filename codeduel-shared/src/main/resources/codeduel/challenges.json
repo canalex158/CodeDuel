@@ -1,0 +1,332 @@
+[
+  {
+    "id": "sum",
+    "title": "Suma de elementos",
+    "description": "Devuelve la suma de los enteros de nums. Un array vacío suma 0. La suma cabe en int. Longitud máxima 10 000.",
+    "difficulty": "BASIC",
+    "signature": "public static int solve(int[] nums)",
+    "starter": "public class Solution {\n    public static int solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [1,2,3]",
+        "output": "6"
+      },
+      {
+        "input": "nums = [-4,7]",
+        "output": "3"
+      },
+      {
+        "input": "nums = []",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "maximum",
+    "title": "Elemento máximo",
+    "description": "Devuelve el mayor entero de nums. El array contiene entre 1 y 10 000 elementos.",
+    "difficulty": "BASIC",
+    "signature": "public static int solve(int[] nums)",
+    "starter": "public class Solution {\n    public static int solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [4,9,2]",
+        "output": "9"
+      },
+      {
+        "input": "nums = [-9,-2,-8]",
+        "output": "-2"
+      },
+      {
+        "input": "nums = [3]",
+        "output": "3"
+      }
+    ]
+  },
+  {
+    "id": "reverse",
+    "title": "Cadena invertida",
+    "description": "Devuelve text con sus caracteres en orden inverso. text contiene hasta 10 000 caracteres ASCII imprimibles, incluidos espacios.",
+    "difficulty": "BASIC",
+    "signature": "public static String solve(String text)",
+    "starter": "public class Solution {\n    public static String solve(String text) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "text = \"hola\"",
+        "output": "\"aloh\""
+      },
+      {
+        "input": "text = \"a b\"",
+        "output": "\"b a\""
+      },
+      {
+        "input": "text = \"\"",
+        "output": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "evens",
+    "title": "Recuento de pares",
+    "description": "Cuenta los elementos pares de nums, incluidos el cero y los números negativos. Longitud máxima 10 000.",
+    "difficulty": "BASIC",
+    "signature": "public static int solve(int[] nums)",
+    "starter": "public class Solution {\n    public static int solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,4]",
+        "output": "2"
+      },
+      {
+        "input": "nums = [-2,0,-3]",
+        "output": "2"
+      },
+      {
+        "input": "nums = []",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "palindrome",
+    "title": "Palíndromo exacto",
+    "description": "Devuelve true si text se lee igual en los dos sentidos. Cuenta espacios y distingue mayúsculas. La cadena vacía es un palíndromo. Longitud máxima 10 000 caracteres ASCII imprimibles.",
+    "difficulty": "BASIC",
+    "signature": "public static boolean solve(String text)",
+    "starter": "public class Solution {\n    public static boolean solve(String text) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "text = \"radar\"",
+        "output": "true"
+      },
+      {
+        "input": "text = \"Radar\"",
+        "output": "false"
+      },
+      {
+        "input": "text = \"\"",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "id": "max-subarray",
+    "title": "Suma máxima contigua",
+    "description": "Devuelve la suma máxima de un subarray contiguo no vacío. nums contiene entre 1 y 10 000 valores de −10 000 a 10 000.",
+    "difficulty": "INTERMEDIATE",
+    "signature": "public static int solve(int[] nums)",
+    "starter": "public class Solution {\n    public static int solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "nums = [-8,-3,-6]",
+        "output": "-3"
+      },
+      {
+        "input": "nums = [2,3]",
+        "output": "5"
+      }
+    ]
+  },
+  {
+    "id": "brackets",
+    "title": "Paréntesis equilibrados",
+    "description": "Devuelve true si cada (, [ o { se cierra con el símbolo correspondiente respetando el orden de anidación. La cadena vacía es válida. text solo contiene esos seis símbolos y su longitud máxima es 10 000.",
+    "difficulty": "INTERMEDIATE",
+    "signature": "public static boolean solve(String text)",
+    "starter": "public class Solution {\n    public static boolean solve(String text) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "text = \"([]{})\"",
+        "output": "true"
+      },
+      {
+        "input": "text = \"([)]\"",
+        "output": "false"
+      },
+      {
+        "input": "text = \"\"",
+        "output": "true"
+      }
+    ]
+  },
+  {
+    "id": "move-zeroes",
+    "title": "Ceros al final",
+    "description": "Devuelve un array que contiene primero los elementos distintos de cero en su orden original, seguidos por todos los ceros. Puedes modificar nums. Longitud máxima 10 000.",
+    "difficulty": "INTERMEDIATE",
+    "signature": "public static int[] solve(int[] nums)",
+    "starter": "public class Solution {\n    public static int[] solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [0,1,0,3,12]",
+        "output": "[1,3,12,0,0]"
+      },
+      {
+        "input": "nums = [0,0]",
+        "output": "[0,0]"
+      },
+      {
+        "input": "nums = []",
+        "output": "[]"
+      }
+    ]
+  },
+  {
+    "id": "subarray-count",
+    "title": "Subarrays con suma objetivo",
+    "description": "Cuenta los subarrays contiguos no vacíos cuya suma es target. Se admiten valores negativos y ceros. nums contiene hasta 10 000 valores de −10 000 a 10 000.",
+    "difficulty": "INTERMEDIATE",
+    "signature": "public static int solve(int[] nums, int target)",
+    "starter": "public class Solution {\n    public static int solve(int[] nums, int target) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [1,1,1], target = 2",
+        "output": "2"
+      },
+      {
+        "input": "nums = [1,-1,0], target = 0",
+        "output": "3"
+      },
+      {
+        "input": "nums = [], target = 0",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "longest-distinct",
+    "title": "Subcadena sin repeticiones",
+    "description": "Devuelve la longitud máxima de una subcadena contigua con todos sus caracteres distintos. Distingue mayúsculas. text contiene hasta 10 000 caracteres ASCII imprimibles.",
+    "difficulty": "INTERMEDIATE",
+    "signature": "public static int solve(String text)",
+    "starter": "public class Solution {\n    public static int solve(String text) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "text = \"abcabcbb\"",
+        "output": "3"
+      },
+      {
+        "input": "text = \"bbbbb\"",
+        "output": "1"
+      },
+      {
+        "input": "text = \"\"",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "histogram",
+    "title": "Rectángulo en histograma",
+    "description": "Cada barra tiene ancho 1 y altura nums[i]. Devuelve el área máxima de un rectángulo que cubre barras contiguas utilizando como altura la menor de ellas. Array vacío: 0. Hay hasta 10 000 barras con alturas de 0 a 1 000 000 000.",
+    "difficulty": "ADVANCED",
+    "signature": "public static long solve(int[] nums)",
+    "starter": "public class Solution {\n    public static long solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [2,1,5,6,2,3]",
+        "output": "10"
+      },
+      {
+        "input": "nums = [2,4]",
+        "output": "4"
+      },
+      {
+        "input": "nums = []",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "lis",
+    "title": "Subsecuencia creciente máxima",
+    "description": "Devuelve la longitud de la subsecuencia estrictamente creciente más larga. Puedes saltar elementos sin reordenarlos. nums contiene hasta 10 000 enteros.",
+    "difficulty": "ADVANCED",
+    "signature": "public static int solve(int[] nums)",
+    "starter": "public class Solution {\n    public static int solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [10,9,2,5,3,7,101,18]",
+        "output": "4"
+      },
+      {
+        "input": "nums = [7,7,7]",
+        "output": "1"
+      },
+      {
+        "input": "nums = []",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "rain",
+    "title": "Agua atrapada",
+    "description": "Cada elemento es la altura de una barra de ancho 1. Devuelve las unidades de agua que quedan entre las barras después de llover. Hay hasta 10 000 barras con alturas de 0 a 1 000 000 000.",
+    "difficulty": "ADVANCED",
+    "signature": "public static long solve(int[] nums)",
+    "starter": "public class Solution {\n    public static long solve(int[] nums) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "nums = [0,1,0,2,1,0,1,3,2,1,2,1]",
+        "output": "6"
+      },
+      {
+        "input": "nums = [4,2,0,3,2,5]",
+        "output": "9"
+      },
+      {
+        "input": "nums = []",
+        "output": "0"
+      }
+    ]
+  },
+  {
+    "id": "window",
+    "title": "Ventana mínima",
+    "description": "Devuelve la subcadena contigua más corta de text que contiene todos los caracteres de target con sus multiplicidades. Ante empate devuelve la que empieza antes. Si no hay solución o target está vacío, devuelve la cadena vacía. Cadenas ASCII imprimibles de hasta 10 000 caracteres.",
+    "difficulty": "ADVANCED",
+    "signature": "public static String solve(String text, String target)",
+    "starter": "public class Solution {\n    public static String solve(String text, String target) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "text = \"ADOBECODEBANC\", target = \"ABC\"",
+        "output": "\"BANC\""
+      },
+      {
+        "input": "text = \"abc\", target = \"aa\"",
+        "output": "\"\""
+      },
+      {
+        "input": "text = \"abxxba\", target = \"ab\"",
+        "output": "\"ab\""
+      }
+    ]
+  },
+  {
+    "id": "grid",
+    "title": "Camino más corto en una cuadrícula",
+    "description": "grid es una matriz rectangular no vacía de hasta 100 × 100. 0 es libre y 1 es obstáculo. Devuelve el mínimo número de movimientos ortogonales desde la esquina superior izquierda a la inferior derecha, o −1 si es imposible. Si ambas esquinas coinciden en una celda libre, devuelve 0.",
+    "difficulty": "ADVANCED",
+    "signature": "public static int solve(int[][] grid)",
+    "starter": "public class Solution {\n    public static int solve(int[][] grid) {\n        throw new UnsupportedOperationException(\"Implementa solve\");\n    }\n}\n",
+    "examples": [
+      {
+        "input": "grid = [[0,1],[0,0]]",
+        "output": "2"
+      },
+      {
+        "input": "grid = [[0,1],[1,0]]",
+        "output": "-1"
+      },
+      {
+        "input": "grid = [[0]]",
+        "output": "0"
+      }
+    ]
+  }
+]
