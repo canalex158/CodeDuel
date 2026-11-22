@@ -1,0 +1,4 @@
+plugins { id 'application' }
+dependencies { implementation project(':codeduel-shared') }
+application { mainClass = 'dev.codeduel.judge.JudgeMain' }
+tasks.named("test") { inputs.property("dockerTests", providers.environmentVariable("CODEDUEL_DOCKER_TESTS").orElse("")) }

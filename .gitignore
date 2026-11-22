@@ -4,3 +4,6 @@
 **/build/
 .env
 *.iml
+
+# Private evaluator fixtures
+/codeduel-judge/src/main/resources/codeduel/suites.json

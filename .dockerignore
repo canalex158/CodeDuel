@@ -1,0 +1,12 @@
+*
+!deploy/
+!deploy/*.Dockerfile
+!codeduel-server/
+!codeduel-server/build/
+!codeduel-server/build/libs/
+!codeduel-server/build/libs/codeduel-server.jar
+!codeduel-judge/
+!codeduel-judge/build/
+!codeduel-judge/build/install/
+!codeduel-judge/build/install/codeduel-judge/
+!codeduel-judge/build/install/codeduel-judge/**

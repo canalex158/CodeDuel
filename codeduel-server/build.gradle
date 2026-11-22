@@ -1,0 +1,11 @@
+plugins { id 'org.springframework.boot' }
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:3.5.16')
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation project(':codeduel-shared')
+}
+bootJar { archiveFileName = 'codeduel-server.jar' }
+
+tasks.named('test') {
+    inputs.property('integrationEndpoint', providers.environmentVariable('CODEDUEL_TEST_ENDPOINT').orElse(''))
+}

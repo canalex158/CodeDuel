@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 rootProject.name = 'CodeDuel'
-include 'codeduel-shared', 'codeduel-plugin'
+include 'codeduel-shared', 'codeduel-judge', 'codeduel-server', 'codeduel-plugin'

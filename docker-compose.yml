@@ -1,0 +1,51 @@
+services:
+  sandbox:
+    profiles: [build]
+    image: codeduel-sandbox:1.0.0
+    build:
+      context: deploy
+      dockerfile: sandbox.Dockerfile
+
+  server:
+    build:
+      context: .
+      dockerfile: deploy/server.Dockerfile
+    environment:
+      CODEDUEL_BIND: 0.0.0.0
+      CODEDUEL_JUDGE_URL: http://judge:8091/evaluate
+      CODEDUEL_JUDGE_TOKEN: ${CODEDUEL_JUDGE_TOKEN:?Genera CODEDUEL_JUDGE_TOKEN en .env}
+    ports:
+      - "127.0.0.1:${CODEDUEL_PUBLIC_PORT:-8080}:8080"
+    networks: [edge, private]
+    depends_on: [judge]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs: [/tmp]
+    mem_limit: 384m
+    pids_limit: 160
+    restart: unless-stopped
+
+  judge:
+    build:
+      context: .
+      dockerfile: deploy/judge.Dockerfile
+    environment:
+      CODEDUEL_JUDGE_BIND: 0.0.0.0
+      CODEDUEL_JUDGE_TOKEN: ${CODEDUEL_JUDGE_TOKEN:?Genera CODEDUEL_JUDGE_TOKEN en .env}
+      CODEDUEL_SANDBOX_RUNTIME: ${CODEDUEL_SANDBOX_RUNTIME:-}
+    volumes:
+      - "${CODEDUEL_DOCKER_SOCKET:-/var/run/docker.sock}:/var/run/docker.sock"
+    networks: [private]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs: [/tmp]
+    mem_limit: 384m
+    pids_limit: 128
+    restart: unless-stopped
+
+networks:
+  edge: {}
+  private:
+    internal: true
