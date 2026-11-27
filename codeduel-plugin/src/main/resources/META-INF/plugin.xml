@@ -9,7 +9,7 @@
             <li>Choose from 15 challenges and write your solution in the IntelliJ IDEA editor.</li>
             <li>Run the public test cases, submit your solution for evaluation, and request a rematch.</li>
         </ul>
-        <p>CodeDuel requires a running CodeDuel server. Set the server URL in the CodeDuel tool window.</p>
+        <p>To play online, open the CodeDuel tool window, select <b>Configurar servidor…</b> (Configure server), and enter <code>wss://duel.alexdumitru.es/duel</code>. Both players should use the same server.</p>
     ]]></description>
     <change-notes><![CDATA[<p>Initial release of CodeDuel with private Java coding duels and automated solution evaluation.</p>]]></change-notes>
     <depends>com.intellij.modules.platform</depends>
